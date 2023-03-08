@@ -7,6 +7,22 @@
     <title>Document</title>
   </head>
   <body>
+    <p class="lead">
+      <h2 id="response"></h2>
+    </p>
+
+    <script>
+      window.addEventListener("message", getMessage, false);
+      function getMessage(e) {
+        var content = '';
+        // e.data 接受傳遞訊息
+        content += "Get Message =>" + e.data + '<br>';
+        // e.origin 接受訊息domain
+        content += "Url from " + e.origin;
+        document.getElementById("response").innerHTML = "<p>" + content + "</p>";
+      };
+    </script>
+
     <!-- <div>hi</div>
     <h2 id="location"></h2> -->
     <!-- <script>
@@ -38,20 +54,6 @@
     </script> -->
 
         <!-- method2 -->
-        <p class="lead">
-          <h2 id="response"></h2>
-        </p>
 
-        <script>
-          window.addEventListener("message", getMessage, false);
-          function getMessage(e) {
-            var content = '';
-            // e.data 接受傳遞訊息
-            content += "Get Message =>" + e.data + '<br>';
-            // e.origin 接受訊息domain
-            content += "Url from " + e.origin;
-            document.getElementById("response").innerHTML = "<p>" + content + "</p>";
-          };
-        </script>
   </body>
 </html>
