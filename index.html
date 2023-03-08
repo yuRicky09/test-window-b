@@ -19,6 +19,24 @@
       const domainText = document.querySelector("#location");
       domainText.textContent = url;
     </script> -->
-    <script src="./script.js"></script>
+
+    <script>
+      window.addEventListener("message", (event) => {
+        // IMPORTANT: check the origin of the data!
+        console.log("data", event.data);
+        if (event.origin === "https://test-window-a.vercel.app/") {
+          console.log(event.data);
+          // The data was sent from your site.
+          // Data sent with postMessage is stored in event.data:
+        } else {
+          // The data was NOT sent from your site!
+          // Be careful! Do not use it. This else branch is
+          // here just for clarity, you usually shouldn't need it.
+          return;
+        }
+      });
+    </script>
+
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>
