@@ -1,7 +1,6 @@
 window.addEventListener("message", (event) => {
   // IMPORTANT: check the origin of the data!
-  console.log(event.origin);
-  if (event.origin === "https://test-window-b.vercel.app/") {
+  if (event.origin === "https://test-window-a.vercel.app/") {
     console.log(event.data);
     // The data was sent from your site.
     // Data sent with postMessage is stored in event.data:
