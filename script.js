@@ -1,5 +1,6 @@
 const loca = document.querySelector("#location");
-loca.innerText = window.parent.location.ancestorOrigins;
+console.log(window.opener);
+loca.innerText = window.opener;
 console.log(loca);
 
 window.addEventListener("message", (event) => {
