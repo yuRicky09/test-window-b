@@ -21,7 +21,11 @@
     </script> -->
     <div>我是分頁B</div>
     <p id="text"></p>
+    <p id="text2"></p>
     <script>
+      console.log(window.parent.location);
+      document.getElementById("text2").innerText = document.referrer;
+
       function receiveMessage(e) {
         console.log(e.origin);
 
