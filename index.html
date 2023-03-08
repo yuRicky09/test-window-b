@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      console.log(window.parent);
-      console.log(window.parent.location);
-    </script>
   </head>
   <body>
     <div>hi</div>
+    <h2 id="location"></h2>
+    <script>
+      console.log(window.parent);
+      console.log(window.parent.location);
+
+      const location = document.querySelector("#location");
+      location.innerText = window.parent.location;
+    </script>
   </body>
 </html>
