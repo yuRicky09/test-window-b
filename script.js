@@ -1,6 +1,6 @@
 const loca = document.querySelector("#location");
 console.log(window.opener);
-loca.innerText = window.opener;
+loca.innerText = window.opener."0";
 console.log(loca);
 
 window.addEventListener("message", (event) => {
