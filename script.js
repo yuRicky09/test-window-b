@@ -1,5 +1,6 @@
 window.addEventListener("message", (event) => {
   // IMPORTANT: check the origin of the data!
+  console.log("data", event.data);
   if (event.origin === "https://test-window-a.vercel.app/") {
     console.log(event.data);
     // The data was sent from your site.
