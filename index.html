@@ -5,18 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      window.addEventListener("message", function (event) {
-        if (event.origin !== "https://test-window-a.vercel.app/") {
-          return;
-        }
-
-        var message = event.data;
-        console.log(message); // 'Hello from parent window!'
-      });
-
-      console.log(window.opener);
-    </script>
   </head>
   <body>
     <!-- <div>hi</div>
@@ -31,24 +19,12 @@
       const domainText = document.querySelector("#location");
       domainText.textContent = url;
     </script> -->
-
-    <!-- <script>
-      window.addEventListener("message", (event) => {
-        // IMPORTANT: check the origin of the data!
-        console.log("data", event.data);
-        if (event.origin === "https://test-window-a.vercel.app/") {
-          console.log(event.data);
-          // The data was sent from your site.
-          // Data sent with postMessage is stored in event.data:
-        } else {
-          // The data was NOT sent from your site!
-          // Be careful! Do not use it. This else branch is
-          // here just for clarity, you usually shouldn't need it.
-          return;
-        }
+    <div>h1</div>
+    <script>
+      window.addEventListener("message", function (event) {
+        var message = event.data;
+        console.log(message); // 'Hello from parent window!'
       });
-    </script> -->
-
-    <!-- method2 -->
+    </script>
   </body>
 </html>
