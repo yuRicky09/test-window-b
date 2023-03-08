@@ -19,6 +19,8 @@
           : document.location.href;
 
       console.log("🚀 ~ file: index.html:17 ~ url:", url);
+      const domainText = document.querySelector("#location");
+      domainText.textContent = url;
     </script>
     <script src="./script.js"></script>
   </body>
