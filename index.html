@@ -25,7 +25,7 @@
       function receiveMessage(e) {
         console.log(e.origin);
 
-        if (e.origin !== "https://test-window-a.vercel.app/") {
+        if (e.origin !== "https://test-window-a.vercel.app") {
           console.log("資料來源錯誤");
           return false;
         }
