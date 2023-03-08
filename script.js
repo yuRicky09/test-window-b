@@ -1,3 +1,3 @@
-const location = document.querySelector("#location");
-console.log(location);
+const loca = document.querySelector("#location");
+console.log(loca);
 // location.innerText = window.parent.location;
