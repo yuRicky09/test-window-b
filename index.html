@@ -19,12 +19,21 @@
       const domainText = document.querySelector("#location");
       domainText.textContent = url;
     </script> -->
-    <div>h1</div>
+    <div>我是分頁B</div>
+    <p id="text"></p>
     <script>
-      window.addEventListener("message", function (event) {
-        var message = event.data;
-        console.log(message); // 'Hello from parent window!'
-      });
+      function receiveMessage(e) {
+        if (e.origin !== "https://mother.tw") {
+          console.log("資料來源錯誤");
+          return false;
+        }
+        // 來源網址是指定的網域時
+        else {
+          // 拿傳來的參數（e.data）
+          const message = e.data;
+          document.getElementById("text").innerText = message;
+        }
+      }
     </script>
   </body>
 </html>
