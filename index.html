@@ -23,7 +23,8 @@
     <p id="text"></p>
     <p id="text2"></p>
     <script>
-      console.log(window.parent.location);
+      console.log("window.parent.location", window.parent.location);
+      console.log("window.opener", window.opener);
       document.getElementById("text2").innerText = document.referrer;
 
       function receiveMessage(e) {
